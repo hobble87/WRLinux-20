@@ -1,0 +1,92 @@
+<manifest>
+    <remote  name="base" fetch="https://github.com/WindRiver-Labs"/>
+    <default revision="WRLINUX_10_21_BASE" remote="base" sync-j="4"/>
+    <project name="bcm-2xxx-rpi" remote="base" path="layers/bcm-2xxx-rpi" revision="WRLINUX_10_21_BASE">
+    </project>
+    <project name="bitbake" remote="base" path="layers/oe-core/bitbake" revision="wr-10.21-20210516">
+        <linkfile src="." dest="bitbake"/>
+    </project>
+    <project name="intel-socfpga" remote="base" path="layers/intel-socfpga" revision="WRLINUX_10_21_BASE">
+    </project>
+    <project name="intel-x86" remote="base" path="layers/intel-x86" revision="WRLINUX_10_21_BASE">
+    </project>
+    <project name="marvell-cn9xxx" remote="base" path="layers/marvell-cn9xxx" revision="WRLINUX_10_21_BASE">
+    </project>
+    <project name="meta-anaconda" remote="base" path="layers/meta-anaconda" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-browser" remote="base" path="layers/meta-browser" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-cgl" remote="base" path="layers/meta-cgl" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-clang" remote="base" path="layers/meta-clang" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-cloud-services" remote="base" path="layers/meta-cloud-services" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-dpdk" remote="base" path="layers/meta-dpdk" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-gplv2" remote="base" path="layers/meta-gplv2" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-intel" remote="base" path="layers/meta-intel" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-intel-fpga" remote="base" path="layers/meta-intel-fpga" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-intel-qat" remote="base" path="layers/meta-intel-qat" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-mingw" remote="base" path="layers/meta-mingw" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-openembedded" remote="base" path="layers/meta-openembedded" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-openssl102" remote="base" path="layers/meta-openssl102" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-openssl102-fips" remote="base" path="layers/meta-openssl102-fips" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-python2" remote="base" path="layers/meta-python2" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-qt5" remote="base" path="layers/meta-qt5" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-raspberrypi" remote="base" path="layers/meta-raspberrypi" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-realtime" remote="base" path="layers/meta-realtime" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-secure-core" remote="base" path="layers/meta-secure-core" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-security" remote="base" path="layers/meta-security" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-selinux" remote="base" path="layers/meta-selinux" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-tensorflow" remote="base" path="layers/meta-tensorflow" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-virtualization" remote="base" path="layers/meta-virtualization" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-xilinx" remote="base" path="layers/meta-xilinx" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-xilinx-tools" remote="base" path="layers/meta-xilinx-tools" revision="wr-10.21-20210516">
+    </project>
+    <project name="meta-yocto" remote="base" path="layers/meta-yocto" revision="wr-10.21-20210516">
+    </project>
+    <project name="nxp-imx6" remote="base" path="layers/nxp-imx6" revision="WRLINUX_10_21_BASE">
+    </project>
+    <project name="nxp-imx8" remote="base" path="layers/nxp-imx8" revision="WRLINUX_10_21_BASE">
+    </project>
+    <project name="nxp-s32g2xx" remote="base" path="layers/nxp-s32g2xx" revision="WRLINUX_10_21_BASE">
+    </project>
+    <project name="oe-core" remote="base" path="layers/oe-core" revision="wr-10.21-20210516">
+        <linkfile src="oe-init-build-env" dest="oe-init-build-env"/>
+        <linkfile src="meta" dest="meta"/>
+        <linkfile src="scripts" dest="scripts"/>
+    </project>
+    <project name="ti-j72xx" remote="base" path="layers/ti-j72xx" revision="WRLINUX_10_21_BASE">
+    </project>
+    <project name="wr-ostree" remote="base" path="layers/wr-ostree" revision="WRLINUX_10_21_BASE">
+    </project>
+    <project name="wr-template" remote="base" path="layers/wr-template" revision="WRLINUX_10_21_BASE">
+    </project>
+    <project name="wrlinux" remote="base" path="layers/wrlinux" revision="WRLINUX_10_21_BASE">
+    </project>
+    <project name="yocto-kernel-cache-5.10" remote="base" path="layers/wrlinux/git/yocto-kernel-cache.git" bare="True"/>
+    <project name="linux-yocto-5.10" remote="base" path="layers/wrlinux/git/linux-yocto.git" bare="True"/>
+    <project name="xilinx-zynq" remote="base" path="layers/xilinx-zynq" revision="WRLINUX_10_21_BASE">
+    </project>
+    <project name="xilinx-zynqmp" remote="base" path="layers/xilinx-zynqmp" revision="WRLINUX_10_21_BASE">
+    </project>
+</manifest>
