@@ -1,0 +1,15 @@
+.repo*
+*.pyc
+*.pyo
+*.swp
+*.orig
+*.rej
+*~
+/bin
+/environment-setup-*
+/layers/*
+!layers/local
+bitbake
+oe-init-build-env
+meta
+scripts
