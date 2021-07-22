@@ -31,11 +31,11 @@ open terminal
 edit bblayers.conf to add WRLinux-20/rpi3b/wrl-rpi-bsp
 add lines to local.conf 
 
-> MACHINE = "rpi3-64"
-> PREFERRED_PROVIDER_virtual/kernel = "linux-raspberrypi"
-> PNWHITELIST_raspberrypi += 'pi-bluetooth'
-> PNWHITELIST_raspberrypi += 'udev-rules-rpi'
-> BB_NO_NETWORK = '0'
+> MACHINE = "rpi3-64" \
+> PREFERRED_PROVIDER_virtual/kernel = "linux-raspberrypi" \
+> PNWHITELIST_raspberrypi += 'pi-bluetooth' \
+> PNWHITELIST_raspberrypi += 'udev-rules-rpi' \
+> BB_NO_NETWORK = '0' \
 
 these settings will eventually be all set in the provided setup script
 
