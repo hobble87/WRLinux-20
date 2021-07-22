@@ -1,6 +1,0 @@
-2021-07-21 14:28:39,005     INFO [sanity.py:105 -      check_hosttools(): All required host tools are available.
-2021-07-21 14:28:39,817    PLAIN [setup.py:299 -    load_mirror_index(): Loading the mirror index from https://github.com/WindRiver-Labs/mirror-index (WRLINUX_10_21_BASE)...
-2021-07-21 14:28:43,223    PLAIN [layer_index.py:107 -             __init__(): Using index Wind River Developer Layer Index from the mirror index...
-2021-07-21 14:28:43,391    PLAIN [setup.py:252 -                 main(): Setting distro to "wrlinux"
-2021-07-21 14:28:43,391    PLAIN [setup.py:253 -                 main(): Setting machine to "qemux86-64"
-2021-07-21 14:28:43,525    PLAIN [setup.py:1209 -         commit_files(): Updated project configuration
