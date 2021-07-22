@@ -5,7 +5,7 @@ DEPSNOT=("")
 # !! IMPORTANT !! 
 # CHANGE THESE VARIBLES 
 INSTALLLOCATION="/media/"$USER"/DATA/wrlinux-x"
-BUILDLOCATION="/media/"$USER"/DATA/rpi_WRLinux"
+BUILDLOCATION="/media/"$USER"/DATA/WRLinux"
 #download wrlinux repo
 
 cat <<EOF 
@@ -47,9 +47,9 @@ fi
 
 echo "creating setup folders" 
 if [ -d "$BUILDLOCATION" ]; then
-    echo "rpi_WRLinux Directory Exists"
+    echo "WRLinux Directory Exists"
 else
-    echo " Setting Up Directory Structure for RPI"
+    echo " Setting Up Directory Structure"
     mkdir "$BUILDLOCATION"
     cd "$BUILDLOCATION" || exit
     ../wrlinux-x/setup.sh --all-layers
