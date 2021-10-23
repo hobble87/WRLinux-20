@@ -1,2 +1,0 @@
-# Project template settings
-TEMPLATECONF=${TEMPLATECONF:-$OEROOT/config}
