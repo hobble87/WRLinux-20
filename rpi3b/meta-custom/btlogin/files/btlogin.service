@@ -1,0 +1,13 @@
+[Unit]
+Description=start the bt login script
+Wants=network-online.target
+After=network-online.target
+Bindsto=network.service
+
+[Service]
+ExecStart=sh /usr/bin/BTLogin.sh
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

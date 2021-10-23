@@ -1,0 +1,13 @@
+[Unit]
+Description=persistent iptables service
+DefaultDependencies=no
+After=systemd-sysctl.service
+Before=sysinit.target
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/iptables-restore /etc/iptables/ipv4.rules
+ExecReload=/usr/sbin/iptables-restore /etc/iptables/ipv4.rules
+ExecStop=/usr/sbin/iptables -F
+RemainAfterExit=yes
+[Install]
+WantedBy=multi-user.target

@@ -1,48 +1,34 @@
 # WRLinux-20
-WRLinux-20 build hardknott
-rpi3b folder is the BSP copied base from https://github.com/rdanter/wrl-rpi-bsp 
-updated kernel to use linux-raspberrypi_5.10
+This repo if for adding RPI support to WRLinux 20 
 
-**this script will download all repos for all types of processor they support ** \
-i have the intention to use the template schema for each different hardware i will use 
+For this project i used a raspberry pi 3 and intention was to use as an AP combined with BTLogin Script
+to use on board wifi to connect to BTOpenzone hotspot and the use iptables to MASQUERADE 
 
-i.e a temple for rpi 3 b+
-			  imx6
-			  imx8
-			  rpi 4
-
-project will build but remains untested at this moment 
-i will keep this up to date as much as i can 
+--------------         -----------------     ---------------         ---------------------------------------
+| BTOpenzone  |  --->  | wlan0 (RPI)   |     | wlan1 (usb) |      <--| tv, phone, laptop, ETC              |
+| Hotspot     |        -----------------     ---------------         ---------------------------------------
+--------------         
 
 
+i wanted to achive this by using systemd-networkd 
+so packages ifupdown, dhcpcd, dhcpcd5, isc-dhcp-client, isc-dhcp-common, rsyslog was removed 
+
+
+i have also decided to use u-boot for my image as looking into a OTA update 
 ## Usage
+
+please also make sure you have added meta-raspberrypi to bblayers (google will identify repo)
 this is build for using ubuntu 20.04
-please check script before running this is set for my personal builds
-run command
 
-    . ./setup_env.sh
-
-the go to folder WRLinux
-open terminal
-
-    . ./environment-setup-x86_64-wrlinuxsdk-linux
-    . ./oe-init-build-env
-
-edit bblayers.conf to add WRLinux-20/rpi3b/wrl-rpi-bsp
-add lines to local.conf 
-
-> MACHINE = "rpi3-64" \
-> PREFERRED_PROVIDER_virtual/kernel = "linux-raspberrypi" \
-> PNWHITELIST_raspberrypi += 'pi-bluetooth' \
-> PNWHITELIST_raspberrypi += 'udev-rules-rpi' \
-> BB_NO_NETWORK = '0' 
-
-these settings will eventually be all set in the provided setup script
+add this folder your bblayers
+add the required .bb to your local.conf (will be doing templates later)
 
 now you can run 
 
     bitbake wrlinux-image-std
 
 
-
-
+TODO:
+    use templates for build 
+    tidy repo
+    rewrite BTLogin to suit systemd way (atm keeps sending login)
