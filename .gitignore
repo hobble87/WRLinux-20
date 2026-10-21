@@ -1,0 +1,12 @@
+# repo tool metadata
+.repo/
+
+# local git config
+.gitconfig
+.repo_.gitconfig.json
+
+# macOS
+.DS_Store
+
+# backups
+*.bak
